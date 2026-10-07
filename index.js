@@ -25,7 +25,7 @@ const gameMove = () => {
 
   let randomNumber = generateRandomNumber(0, 3);
   let gameColor = colors[randomNumber];
-  console.log("game color: ", gameColor);
+  // console.log("game color: ", gameColor);
   game.push(gameColor);
   console.log("game: ", game);
 
@@ -39,14 +39,7 @@ $(".btn").click((e) => {
   player.push(chosenColor);
   animatePress(chosenColor);
   playSound(chosenColor);
-
-  // console.log("player color: ", chosenColor);
-  // console.log(e.target.id);
-  console.log("player: ", player);
-
-  console.log("click's number: ", player.length);
   checkAnswer(player.length - 1);
-
 });
 
 const checkAnswer = (currentLevel) => {
@@ -89,14 +82,3 @@ const restartGame = () => {
   game = [];
   player = [];
 }
-
-
-
-
-
-
-
-
-
-
-
